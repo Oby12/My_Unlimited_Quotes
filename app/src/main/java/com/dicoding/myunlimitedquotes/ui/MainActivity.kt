@@ -27,9 +27,10 @@ class MainActivity : AppCompatActivity() {
     private fun getData() {
         val adapter = QuoteListAdapter()
         binding.rvQuote.adapter = adapter
-        mainViewModel.getQuote()
+//        mainViewModel.getQuote()
         mainViewModel.quote.observe(this, {
-            adapter.submitList(it)
+            adapter.submitData(lifecycle, it)  //<- ini adlah penggunaan unutk memasukan data ke adapter pada paging 3
+//            adapter.submitList(it)
         })
     }
 }
