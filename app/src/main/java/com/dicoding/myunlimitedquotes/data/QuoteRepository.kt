@@ -22,5 +22,4 @@ class QuoteRepository(private val quoteDatabase: QuoteDatabase, private val apiS
             }
         ).liveData
     }
-    }
 }
